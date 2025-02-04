@@ -31,7 +31,7 @@ context.Users.Add(user);
 await context.SaveChangesAsync();
 return new UserDto
 {
-    UserName=user.UserName,
+    Username=user.UserName,
     Token=tokenService.CreateToken(user)
 };
 
@@ -54,7 +54,7 @@ var user =await context.Users.FirstOrDefaultAsync(x=>
 
     return new UserDto
     {
-        UserName=user.UserName,
+        Username=user.UserName,
         Token=tokenService.CreateToken(user)
 
     };
